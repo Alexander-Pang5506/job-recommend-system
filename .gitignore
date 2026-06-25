@@ -1,0 +1,35 @@
+# IDE
+.idea/
+.vscode/
+
+# Python virtualenv
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Large binaries
+python-3.9.10-amd64.exe
+get-pip.py
+
+# SQL backups
+recommend_job_backup.sql
+recommend_job_backup_utf8.sql
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Django
+*.log
+db.sqlite3
+
+# Chromedriver binary
+job/chromedriver.exe
+
+# Temp
+/tmp/
+*.tmp
