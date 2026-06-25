@@ -90,16 +90,8 @@ WSGI_APPLICATION = 'JobRecommend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': "recommend_job",  # 数据名
-        "USER": "root",  # 用户名
-        "PASSWORD": "12345678",
-        "HOST": "localhost",  # 域名
-        "PORT": "3306",
-        'OPTIONS': {
-            'charset': 'utf8mb4',
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES', names utf8mb4, character set utf8mb4",
-        },
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -138,6 +130,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Render 部署需要 STATIC_ROOT
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # 静态文件资源访问接口固定配置
 STATICFILES_DIRS = [

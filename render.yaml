@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: job-recommend-system
+    env: docker
+    plan: free
+    healthCheckPath: /
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
